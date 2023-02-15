@@ -1,0 +1,10 @@
+package databaseconnectivity;
+
+public class GetDir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

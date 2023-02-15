@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+</head>
+<body>
+<form action="servlet" >
+User name:<input type="text" name="uname"><br><br>
+Password:<input type="text" name="pwd"><br>
+         <input type="submit" value="Ok"></form>
+</body>
+</html>

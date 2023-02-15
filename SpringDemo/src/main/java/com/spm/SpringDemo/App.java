@@ -1,0 +1,24 @@
+package com.spm.SpringDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //System.out.println( "Hello World!" );
+        //vehicle obj=new Bike();
+        //obj.drive();
+    	ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
+    	//tyre t=(tyre)context.getBean("tyre");
+    	//System.out.println(t);
+    	car obj=(car)context.getBean("car");
+        obj.drive();
+
+    }
+}
