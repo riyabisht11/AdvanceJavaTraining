@@ -17,3 +17,5 @@
 127.0.0.1 - - [15/Feb/2023:10:07:45 +0530] "GET /SecondServletProject/Welcome2?uname=34&pwd=56 HTTP/1.1" 500 3583
 127.0.0.1 - - [15/Feb/2023:10:08:57 +0530] "GET / HTTP/1.1" 404 751
 127.0.0.1 - - [15/Feb/2023:10:09:05 +0530] "GET /SecondServletProject/Welcome2?uname=wrer&pwd=gh HTTP/1.1" 500 3583
+127.0.0.1 - - [15/Feb/2023:10:16:19 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [15/Feb/2023:10:16:26 +0530] "GET /SecondServletProject/Welcome2?uname=12&pwd=34 HTTP/1.1" 500 3583
