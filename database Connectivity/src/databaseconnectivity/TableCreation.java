@@ -11,10 +11,10 @@ public class TableCreation {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1","root","root");
-			Statement stmt = c.createStatement();
+			Statement stmt = c.prepStatement();
 			stmt.executeUpdate("create table Student1(roll int, name varchar(35))");
-			stm.setInt(1, 101);
-			stm.setString(2,"Riya");
+			stmt.setInt(1, 101);
+			stmt.setString(2,"Riya");
 			System.out.println("Table Created..");
 		}
 		catch(Exception ae) {

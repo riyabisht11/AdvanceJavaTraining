@@ -29,20 +29,26 @@ public class WelcomeBack extends HttpServlet {
 		out.print("</body></html>");
 		String uname =request.getParameter("uname");
 		String password=request.getParameter("pwd");
-		out.print("welcome to :"+uname);
-		out.print("Your Password is :"+password);
+		String mob=request.getParameter("mobile");
+		out.print("welcome to :"+uname+"<br/>");
+		out.print("Your Password is :"+password+"<br/>");
+		out.print("Your mobile no. is :"+mob);
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		String url="jdbc:mysql://localhost:3306/servlet";
+		String url="jdbc:mysql://localhost:3306/Servlet";
 		Connection con=DriverManager.getConnection(url,"root","root");
-		PreparedStatement ps=con.prepareStatement("insert into login1 values(?,?)");
+		PreparedStatement ps=con.prepareStatement("insert into login1 values(?,?,?)");
 		ps.setString(1,uname);
 		ps.setString(2,password);
 		
 		ps.executeUpdate();
 		ps.close();
 		con.close();
+		
+		out.print("\nMsg At Browser:Record inserted Successfully!!!");
+		System.out.println("\nMsg At Console:Record inserted Successfully!!!");
 		}
+		
 		catch(Exception e) {}{}		
 	}
 }

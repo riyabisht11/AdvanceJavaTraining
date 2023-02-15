@@ -22,25 +22,33 @@ public class Welcome2 extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		response.setContentType("text/html");
 		out.print("<html><body>");
-		out.print("<h1>Welcome to my first servlet program<h1>");
+		out.print("<h1>Welcome from my first servelet program</h1>");
 		out.print("</body></html>");
-		String uname=request.getParameter("uname");
+		String uname =request.getParameter("uname");
 		String password=request.getParameter("pwd");
 		out.print("welcome to :"+uname);
-		out.print("Your Password is:"+password);
+		out.print("Your Password is :"+password);
 		try {
-			Class.forName("com.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Servlet","root","root");
-			Statement s=con.createStatement();
-			boolean b=s.execute("insert into login values(uname,pwd)");
-			if(b) {
-				out.print("Record inserted successfully!! at browser");
-				System.out.println("Record inserted successfully at console!!");
-			}
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		String url="jdbc:mysql://localhost:3306/Servlet";
+		Connection con=DriverManager.getConnection(url,"root","root");
+		PreparedStatement ps=con.prepareStatement("insert into login1 values(?,?)");
+		ps.setString(1,uname);
+		ps.setString(2,password);
+		
+		ps.executeUpdate();
+		ps.close();
+		con.close();
+		
+	//	if(b) {
+			out.print("\nMsg At Browser:Record inserted Successfully!!!");
+			System.out.println("\nMsg At Console:Record inserted Successfully!!!");
+	//	}
+		
 		}
-		catch(Exception e) {
-			
-		}
+		catch(Exception e) {}
+		
+		}			
+		
 	}
 
-}
