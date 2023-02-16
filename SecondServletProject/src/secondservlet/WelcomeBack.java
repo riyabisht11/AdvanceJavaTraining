@@ -35,11 +35,12 @@ public class WelcomeBack extends HttpServlet {
 		out.print("Your mobile no. is :"+mob);
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		String url="jdbc:mysql://localhost:3306/Servlet";
+		String url="jdbc:mysql://localhost:3306/servlet";
 		Connection con=DriverManager.getConnection(url,"root","root");
 		PreparedStatement ps=con.prepareStatement("insert into login1 values(?,?,?)");
 		ps.setString(1,uname);
 		ps.setString(2,password);
+		ps.setString(3,mob);
 		
 		ps.executeUpdate();
 		ps.close();

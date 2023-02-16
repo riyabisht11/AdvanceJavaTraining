@@ -11,13 +11,13 @@
   </welcome-file-list>
   
   <servlet>
-  <servlet-name>niet</servlet-name>
+  <servlet-name>welcome</servlet-name>
   <servlet-class>secondservlet.WelcomeBack</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  <servlet-name>niet</servlet-name>
-  <url-pattern>/Hi/*</url-pattern>
+  <servlet-name>welcome</servlet-name>
+  <url-pattern>/Hello</url-pattern>
   </servlet-mapping>
   
   
