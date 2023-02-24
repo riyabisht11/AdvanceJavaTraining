@@ -11,15 +11,25 @@
   </welcome-file-list>
   
   <servlet>
+  
   <servlet-name>welcome</servlet-name>
-  <servlet-class>secondservlet.WelcomeBack</servlet-class>
+  <!--<servlet-class>secondservlet.WelcomeBack</servlet-class>-->
+  <jsp-file>/File1.jsp</jsp-file>
+  <init-param>
+  <param-name>name1</param-name>
+  <param-value>Javaconnector</param-value>
+  </init-param>
   </servlet>
   
   <servlet-mapping>
   <servlet-name>welcome</servlet-name>
-  <url-pattern>/Hello</url-pattern>
+  <url-pattern>/Hi/*</url-pattern>
   </servlet-mapping>
+ <context-param>
+ <param-name>name2</param-name>
+ <param-value>MysqlDriver</param-value>
+ </context-param>
   
   
   
-</web-app>
+</web-app>  

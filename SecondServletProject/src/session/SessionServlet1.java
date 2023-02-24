@@ -34,12 +34,12 @@ public class SessionServlet1 extends HttpServlet {
 		      PrintWriter out = response.getWriter();
 
 		      String name = request.getParameter("user");
-		      String password = request.getParameter("pass");
+		      String age = request.getParameter("age");
 		      out.print("Hello "+ name);
-		      out.print("Your Password is: "+ password);
+		      out.print("Your age is: "+ age);
 		      HttpSession session=request.getSession();
 		      session.setAttribute("uname",name);
-		      session.setAttribute("upass",password);
+		      session.setAttribute("age",age);
 		      out.print("<a href='SessionServlet2'>view details</a>");
 		     
 		    }catch(Exception e)

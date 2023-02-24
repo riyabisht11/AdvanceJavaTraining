@@ -15,8 +15,8 @@ public class SessionServlet2 extends HttpServlet {
 		      PrintWriter out = response.getWriter();
 		      HttpSession session=request.getSession();
 		      String u = (String)session.getAttribute("uname");
-		      String p = (String)session.getAttribute("upass");
-		      out.print("Your Name is: "+u+" Your Password is: "+p);
+		      String p = (String)session.getAttribute("age");
+		      out.print("Your Name is: "+u+" Your age is: "+p);
 		      
 		  }catch(Exception e)
 		   {

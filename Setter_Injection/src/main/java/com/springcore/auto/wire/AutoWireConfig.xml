@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="https://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+  https://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <!--  <bean name="address1" class="com.springcore.auto.wire.Address">
+  <property name="street" value="alpha-1"/>
+  <property name="city" value="Gr noida"/></bean>
+  
+  <bean name="address2" class="com.springcore.auto.wire.Address">
+  <property name="street" value="alpha-2"/>
+  <property name="city" value="Delhi"/></bean>-->
+  
+  <bean name="address122" class="com.springcore.auto.wire.Address">
+  <property name="street" value="Beta-1"/>
+  <property name="city" value="Gr noida"/></bean>
+   
+  
+  <bean class="com.springcore.auto.wire.Emp" name="objEmp"  autowire="byType"  />
+  
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

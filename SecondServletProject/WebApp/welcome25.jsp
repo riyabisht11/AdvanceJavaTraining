@@ -10,6 +10,7 @@
 <%
 String myname=request.getParameter("name");
 out.print("Welcome to:"+myname);
+response.sendRedirect("https://www.youtube.com/");
 %>
 
 </body>
